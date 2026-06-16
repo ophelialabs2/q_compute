@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en">
 <head>
 
-<title>Add markdown files — QCOMP-101 </title>
+<title>Hybrid-index2 — QCOMP-101 </title>
 
 
 <link rel="root" href="../../.." />
@@ -181,7 +181,7 @@ window.pluto_recording_audio_url = undefined;
 <li class="dropdown-group">
 <h4>Module 1: Adding course material</h4>
 <ul>
-<li class='active lecture tag_parent1_mod1 tag_track_material tag_markdown tag_frontmatter'><a href='../../../parent1/mod1_add_material/add_markdown/'><span class="entry-number">1.1</span> Add markdown files</a></li><li class=' lecture tag_parent1_mod1 tag_track_julia tag_track_material tag_Pluto tag_PlutoUI'><a href='../../../parent1/mod1_add_material/add_pluto/'><span class="entry-number">1.2</span> Add Pluto notebooks</a></li><li class=' lecture tag_parent1_mod1 tag_track_julia tag_track_material tag_Pluto tag_PlutoUI tag_interactivity'><a href='../../../parent1/mod1_add_material/plutoui_showcase/'><span class="entry-number">1.3</span> PlutoUI showcase</a></li>
+<li class=' lecture tag_parent1_mod1 tag_track_material tag_markdown tag_frontmatter'><a href='../../../parent1/mod1_add_material/add_markdown/'><span class="entry-number">1.1</span> Add markdown files</a></li><li class=' lecture tag_parent1_mod1 tag_track_julia tag_track_material tag_Pluto tag_PlutoUI'><a href='../../../parent1/mod1_add_material/add_pluto/'><span class="entry-number">1.2</span> Add Pluto notebooks</a></li><li class=' lecture tag_parent1_mod1 tag_track_julia tag_track_material tag_Pluto tag_PlutoUI tag_interactivity'><a href='../../../parent1/mod1_add_material/plutoui_showcase/'><span class="entry-number">1.3</span> PlutoUI showcase</a></li>
 </ul>
 </li>
 <li class="dropdown-group">
@@ -233,71 +233,52 @@ window.pluto_recording_audio_url = undefined;
         </nav>
         <div id="pages-content">
            <div class="lecture-header" >
-    <p class="number">Section 1.1</p>
-    <h1>Add markdown files</h1>
+    
+    <h1>Hybrid-index2</h1>
     
     
 </div>
         <div class="pages-markdown">
 <main>
-<h2 id="add-markdown-files"><a href="#add-markdown-files" class="anchor"></a>Add markdown files</h2>
-<p><a href="wiki:Qt_Creator">wiki:Qt_Creator</a>
-If your lecture does not need to run code or use interactivity. You can write it as a markdown file.</p>
-<p>As an extra twist, you can evaluate julia code inside a <code>$</code> symbol. For example,</p>
-<pre><code class="language-julia">$(1 + 1)
-</code></pre>
-<p>will become</p>
-<p>2</p>
-<h2 id="add-front-matter"><a href="#add-front-matter" class="anchor"></a>Add Front-matter</h2>
-<p>For each file, markdown or pluto, you will need to add a <em>front-matter</em>, which specifies the page metadata. For markdown files, the front-matter is specified at the top of the file between three dashes <code>---</code>. For example, the front-matter of this file is</p>
-<pre><code>---
-title: &quot;Add markdown file&quot;
-order: 1
-chapter: 1
-section: 1
-layout: &quot;md.jlmd&quot;
-tags: [&quot;parent1_mod1&quot;, &quot;track_material&quot;, &quot;markdown&quot;, &quot;frontmatter&quot;]
----
-</code></pre>
-<p>You will need to specify the following attributes</p>
-<ul>
-<li><strong><code>title</code></strong>: title of the page</li>
-<li><strong><code>order</code></strong>: the position of the page in the module on the sidebar. <strong>Hint!</strong>: You can also use fractional numbers, e.g. <code>1.5</code>. This can be handy for homeworks, so you can include the homework between the first and second lesson without messing up lessons counting.</li>
-<li><strong><code>layout</code></strong>: set to <code>&quot;md.jlmd&quot;</code>, unless you are using some custom layout</li>
-<li><strong><code>chapter</code></strong> and <strong><code>section</code></strong> (optional): used to number the page. If for example <code>chapter=1</code> and <code>section=2</code>, the page will be displayed as <code>1.2</code> on the sidebar and page header.</li>
-<li><strong><code>image</code></strong> (optional): link to summarizing image to display in the <code>subjects</code> section on the homepage. If left empty, the page wont be included in the subjects section. If no page has an <code>image</code> field in the front-matter, the subjects section is not displayed.</li>
-<li><strong><code>description</code></strong> (optional): short description of the notebook</li>
-<li><strong><code>youtube_id</code></strong> (optional): youtube id of the video associated with the page. If included, the page header will embed the youtube video.</li>
-<li><strong><code>homework_number</code></strong>: needed only for homeworks, the number of the homework</li>
-<li><strong><code>tags</code></strong>: list of keywords for the page. It should at least include the module name, as defined in <code>_data/sidebar.jl</code> to include the page in the sidebar. You can also associate pages to a given track by adding the track id, prefixed with <code>track_</code> to the tags. For example, if you want to include the page in the julia track, add <code>track_julia</code> in the tags list.</li>
-</ul>
-<h2 id="markdown-101"><a href="#markdown-101" class="anchor"></a>Markdown 101</h2>
-<p>If you are not familiar with markdown, you can see for example <a href="https://www.markdowntutorial.com/">here</a>. Here is a quick and dirty cheatsheet</p>
-<ol>
-<li>Use <code>#</code> for headers, for example</li>
-</ol>
-<pre><code class="language-markdown"># Header
-## Subheader
-### Sub-sub-header
-</code></pre>
-<ol start="2">
-<li>You can create links with the syntax</li>
-</ol>
-<pre><code class="language-markdown">[text](adddress)
-</code></pre>
-<p>For example the link to the mardown tutorial above was typed as</p>
-<pre><code class="language-markdown">[here](https://www.markdowntutorial.com/)
-</code></pre>
-<ol start="3">
-<li>You can insert pictures with the syntax</li>
-</ol>
-<pre><code class="language-markdown">![optional alternative text](link-to-picture)
-</code></pre>
-<p>for example</p>
-<pre><code>![](https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-logo-color.png)
-</code></pre>
-<p>will give</p>
-<p><img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-logo-color.png" alt="" /></p>
+<p><a href="#">Home</a> | <a href="#hybrid">Index</a> | <a href="#hybrid-index2">Index2</a> | <a href="#hybrid-index3">Index3</a> | <a href="#geo">Geo</a> | <a href="#siem">SIEM</a></p>
+<hr />
+<h2 id="hypori--avd-setup-instructions"><a href="#hypori--avd-setup-instructions" class="anchor"></a>Hypori &amp; AVD Setup Instructions</h2>
+<p>Enterprise AVD Quick Facts
+•  Enterprise AVD is a Windows 11 virtual machine that uses your  365 credentials
+for an optimized, complete single sign-on (SSO) experience.
+• The Remote Desktop client (MacOS/Windows) supports CAC login and S/MIME encryption.
+• It is BEST experienced from a Windows or MacOS desktop computer, using the Remote
+Desktop client downloaded from the web (instructions in Setup)
+• Available from NIPR and commercial (including home) networks using government,
+corporate, and personal devices
+• Dual personas can access both sets of account (.m/.c) or (.m/.ctr)
+– Each persona requires its own virtual workspace if user wants access to each of their 365
+email/MS Teams accounts
+– Users will need to enroll and complete the onboarding process twice (once for each persona).</p>
+<h2 id="avd-registration-and-setup"><a href="#avd-registration-and-setup" class="anchor"></a>AVD Registration and Setup</h2>
+<p>• Initial Steps:
+– Step 1: Login to a NIPR computer or use a personal computer with CAC capabilities
+– Step 2: Sign up for onboarding at https://’’connect.me/go/avd-setup (CAC required); read the
+User Acknowledgment, select “Yes”, click Save button, and then close the browser
+– Step 3: You will receive an onboarding email from the 365 AVD Onboarding Team
+– Step 4: Choose one of the options</p>
+<p>• Option A: Access from Azure Virtual Desktop Application
+• Step 5a: Once you receive the onboarding email, Download and install the Microsoft Remote
+Desktop application. Direct links depending on device and browser are located at:
+https://’‘connect.me/’’-azure-virtual-desktop-avd-and-remote-workspace/
+• Step 6a: Open the application and select ‘add workspace’.
+• Step 7a: Input the following link: rdweb.wvd.azure.us.
+• Step 8a: Login to AVD using your A365/M365 account username.
+• Step 9a: Select the correct CAC certificate and enter your PIN.
+• Step 10a: Select the server closest to you; East or West.
+• Step 11a: Two additional prompts where you click “OK” and you are set.
+– OR –
+• Option B: Access from Web Browser
+– Step 5b: Once you receive the onboarding email, Go to
+https://client.wvd.azure.us/arm/webclient/index.html
+– Step 6b: Login to AVD using your A365/M365 account username.
+– Step 7b: Select the correct CAC certificate and enter your PIN.
+– Step 8b: Select the server closest to you; East or West.</p>
 </main>
 </div>
 
